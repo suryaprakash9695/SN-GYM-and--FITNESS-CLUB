@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SN Gym & Fitness Club Membership Form</title>
+  <link rel="icon" href="/assets/images/SN GYM& Fitness club white bg.png" type="image/png">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe9e6, #fef3ef);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-wrapper {
+      max-width: 960px;
+      width: 100%;
+      background: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff5e42;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .form-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fafafa;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group label {
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    .submit-btn {
+      background: #ff5e42;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background: #ff784f;
+      transform: scale(1.02);
+    }
+
+    .spinner,
+    .success-msg {
+      text-align: center;
+    }
+
+    .spinner i {
+      font-size: 24px;
+      color: #ff5e42;
+      animation: spin 1s infinite linear;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .qr-section {
+      text-align: center;
+    }
+
+    canvas {
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .form-wrapper {
+        padding: 20px;
+      }
+
+      .form-group label {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-wrapper">
+    <div style="text-align: center; margin-top: 20px;">
+      <button class="submit-btn" type="button"
+        style="width: 30%; margin: auto; display: flex; align-items: center; justify-content: center;"
+        onclick="goBack()">
+        Go Back
+      </button>
+    </div>
+    <script>
+      function goBack() {
+        window.close();
+        window.open('about:blank', '_self');
+      }
+    </script>
+    <h2>SN Gym & Fitness Club - Membership Form</h2>
+    <form id="membershipForm" action="https://api.web3forms.com/submit" method="POST"
+      onsubmit="return handleSubmit(event)">
+      <input type="hidden" name="access_key" value="3b966b20-d490-4253-8298-0b86030f62c3"><!-- Replace with your actual access key -->
+      <input type="hidden" name="subject" value="New Membership Form Submission">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="Full Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp Number</label>
+          <input type="tel" id="whatsapp" name="WhatsApp Number" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="Gender" required>
+            <option disabled selected>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="Date of Birth" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="Age" readonly>
+        </div>
+        <div class="form-group">
+          <label for="bloodgroup">Blood Group</label>
+          <select id="bloodgroup" name="Blood Group" required>
+            <option disabled selected>Select</option>
+            <option>A+</option>
+            <option>B+</option>
+            <option>O+</option>
+            <option>AB+</option>
+            <option>A-</option>
+            <option>B-</option>
+            <option>O-</option>
+            <option>AB-</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="Address" rows="1" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" name="Weight" required>
+        </div>
+        <div class="form-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" name="Height" required>
+        </div>
+        <div class="form-group">
+          <label for="courseType">Course Type</label>
+          <select id="courseType" name="Course Type" required>
+            <option disabled selected>Select Course Type</option>
+            <option>Weight Gain</option>
+            <option>Bodybuilding</option>
+            <option>General Fitness</option>
+            <option>Yoga</option>
+            <option>Cardio Training</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="membership">Membership Type</label>
+          <select id="membership" name="Membership Type" onchange="updatePrice()" required>
+            <option disabled selected>Select</option>
+            <option>Monthly</option>
+            <option>Quarterly</option>
+            <option>Half-Yearly</option>
+            <option>Annual</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="price">Price (INR)</label>
+          <input type="text" id="price" name="Price" readonly>
+        </div>
+        <div class="form-group">
+          <label for="joiningDate">Joining Date</label>
+          <input type="date" id="joiningDate" name="Joining Date" required>
+        </div>
+        <div class="form-group">
+          <label for="endDate">Membership Ends</label>
+          <input type="text" id="endDate" name="Membership End Date" readonly>
+        </div>
+      </div>
+
+      <div class="qr-section">
+        <p><strong>Scan QR to Pay:</strong></p>
+        <canvas id="qrCodeCanvas"></canvas>
+      </div>
+      <button class="submit-btn" type="button"
+        style="width: 30%; margin: auto; display: flex; align-items: center; justify-content: center;"
+        onclick="saveQR()">
+        Save QR <i class="fas fa-download" style="margin-left: 8px;"></i>
+      </button>
+      <script>
+        function saveQR() {
+          const qrCanvas = document.getElementById("qrCodeCanvas");
+          const qrImage = qrCanvas.toDataURL("image/png");
+          const downloadLink = document.createElement("a");
+          downloadLink.href = qrImage;
+          downloadLink.download = "SN_Gym_Payment_QR_Code.png";
+          downloadLink.click();
+        }
+      </script>
+      <div class="note-section">
+        <p>
+          <strong>Declaration:</strong> By submitting this form, I hereby
+          declare that the information provided is
+          accurate
+          and true to the best of my knowledge. I also agree to abide by the
+          rules and regulations of SN Gym & Fitness
+          Club.
+        </p>
+        <p>
+          <strong>Note: </strong> By submitting this form after payment. Please keep the transaction ID and
+          MemberShip.PDF for safe for future reference.
+        </p>
+      </div>
+
+      <button class="submit-btn" type="submit">Submit</button>
+
+      <div class="spinner" id="loadingSpinner" style="display: none;">
+        <i class="fas fa-spinner fa-spin"></i> Submitting...
+      </div>
+      <div class="success-msg" id="successMessage" style="display: none;">Form
+        submitted successfully!</div>
+    </form>
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const joiningDateField = document.getElementById("joiningDate");
+      const today = new Date().toISOString().split("T")[0];
+      joiningDateField.value = today;
+      updatePrice();
+    });
+
+    document.getElementById("dob").addEventListener("change", function () {
+      const dob = new Date(this.value);
+      const today = new Date();
+      let age = today.getFullYear() - dob.getFullYear();
+      const m = today.getMonth() - dob.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) age--;
+      document.getElementById("age").value = age;
+    });
+
+    function updatePrice() {
+      const membership = document.getElementById("membership").value;
+      const priceField = document.getElementById("price");
+      const joiningDateField = document.getElementById("joiningDate");
+      const endDateField = document.getElementById("endDate");
+
+      let price = "", monthsToAdd = 0;
+      switch (membership) {
+        case "Monthly": price = "1000"; monthsToAdd = 1; break;
+        case "Quarterly": price = "2700"; monthsToAdd = 3; break;
+        case "Half-Yearly": price = "5000"; monthsToAdd = 6; break;
+        case "Annual": price = "9000"; monthsToAdd = 12; break;
+      }
+
+      priceField.value = price;
+      if (monthsToAdd && joiningDateField.value) {
+        const joinDate = new Date(joiningDateField.value);
+        joinDate.setMonth(joinDate.getMonth() + monthsToAdd);
+        endDateField.value = joinDate.toISOString().split("T")[0];
+      } else {
+        endDateField.value = "";
+      }
+
+      const upiId = "9305469553-2@ibl"; // Replace with your UPI ID
+      const upiLink = `upi://pay?pa=${upiId}&pn=SN%20Gym%20Fitness%20Club&am=${price}&cu=INR`;
+      new QRious({
+        element: document.getElementById("qrCodeCanvas"),
+        value: upiLink,
+        size: 150,
+        level: 'H'
+      });
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById("membershipForm");
+      document.getElementById("loadingSpinner").style.display = "block";
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" }
+      }).then(response => {
+        document.getElementById("loadingSpinner").style.display = "none";
+        if (response.ok) {
+          generatePDF();
+          document.getElementById("successMessage").style.display = "block";
+          setTimeout(() => window.close(), 4000);
+        } else {
+          alert("Submission failed. Please try again.");
+        }
+      });
+    }
+
+    function generatePDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.text("SN Gym & Fitness Club - Membership Details", 10, 10);
+      const fields = [
+        "name", "email", "whatsapp", "gender", "dob", "age",
+        "bloodgroup", "address", "weight", "height", "membership",
+        "price", "joiningDate", "endDate", "transactionId"
+      ];
+      let y = 20;
+      fields.forEach(field => {
+        const input = document.getElementById(field);
+        if (input) {
+          doc.text(`${input.previousElementSibling.innerText}: ${input.value}`, 10, y);
+          y += 8;
+        }
+      });
+      doc.save("MembershipDetails.pdf");
+    }
+  </script>
+</body>
+
+</html>
