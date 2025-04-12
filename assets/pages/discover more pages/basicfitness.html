@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover More - SN GYM & FITNESS CLUB</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            padding: 30px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .section-heading em {
+            color: #e74c3c;
+        }
+
+        .section-heading img {
+            margin: 20px auto;
+            display: block;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .bg-light {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0px;
+        }
+
+        footer p {
+            color: #232d39;
+            font-size: 16px;
+        }
+
+        footer p a {
+            cursor: pointer;
+            color: #ed563b;
+        }
+
+        footer p a:hover {
+            color: #ed563b;
+        }
+
+        .back-button {
+            display: block;
+            width: 180px;
+            margin: 20px auto;
+            padding: 12px;
+            text-align: center;
+            background: linear-gradient(45deg, #ff5733, #c70039);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(255, 87, 34, 0.5);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back(); // Goes back if there is a history
+            } else {
+                window.open('', '_self').close(); // Tries to close the tab
+                window.location.href = "/index.html"; // Redirects if close fails
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <button class="back-button" onclick="goBack()">&#8592; Go Back</button>
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h2>Welcome to <em>SN GYM & FITNESS CLUB</em></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="fitness-basics">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Basic Fitness Tips</h2>
+                        <img src="/assets/images/line-dec.png" alt="waves">
+                        <p>Discover simple and effective tips to kickstart your fitness journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/strech.jpg" alt="Stretching">
+                        <h4>Start with Stretching</h4>
+                        <p>Begin each workout with a warm-up and stretching to improve flexibility and prevent injuries.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/hydrating.jpeg" alt="Hydration">
+                        <h4>Stay Hydrated</h4>
+                        <p>Drink plenty of water before, during, and after your workouts to stay energized and healthy.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/properform.webp" alt="Proper Form">
+                        <h4>Focus on Proper Form</h4>
+                        <p>Ensure proper posture and form during exercises to maximize benefits and avoid injuries.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/consistent.jpeg" alt="Consistency">
+                        <h4>Be Consistent</h4>
+                        <p>Consistency is key to achieving your fitness goals. Dedicate time regularly to your workouts.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/nutrition.jpeg" alt="Nutrition">
+                        <h4>Maintain a Balanced Diet</h4>
+                        <p>Complement your workouts with nutritious meals for optimal results.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/sleep.webp" alt="Rest">
+                        <h4>Prioritize Rest</h4>
+                        <p>Allow your body to recover with adequate rest and sleep after intense workouts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2025
+                        - Designed & Developed by <a href="https://teamtechpro.netlify.app/" class="tm-text-link"
+                            target="_blank" rel="noopener">Team TechPro </a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer End ***** -->
+</body>
+
+</html>
