@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover More - SN GYM & FITNESS CLUB</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            padding: 30px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .section-heading em {
+            color: #e74c3c;
+        }
+
+        .section-heading img {
+            margin: 20px auto;
+            display: block;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .bg-light {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0px;
+        }
+
+        footer p {
+            color: #232d39;
+            font-size: 16px;
+        }
+
+        footer p a {
+            cursor: pointer;
+            color: #ed563b;
+        }
+
+        footer p a:hover {
+            color: #ed563b;
+        }
+
+        .back-button {
+            display: block;
+            width: 180px;
+            margin: 20px auto;
+            padding: 12px;
+            text-align: center;
+            background: linear-gradient(45deg, #ff5733, #c70039);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(255, 87, 34, 0.5);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back(); // Goes back if there is a history
+            } else {
+                window.open('', '_self').close(); // Tries to close the tab
+                window.location.href = "/index.html"; // Redirects if close fails
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <button class="back-button" onclick="goBack()">&#8592; Go Back</button>
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h2>Welcome to <em>SN GYM & FITNESS CLUB</em></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="muscle-basics">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Basic Muscle Building Course</h2>
+                        <img src="/assets/images/line-dec.png" alt="waves">
+                        <p>Learn the fundamental techniques and exercises for building muscle effectively.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/run.jpeg" alt="Warm-Up">
+                        <h4>Importance of Warm-Up</h4>
+                        <p>Start your muscle-building journey with a proper warm-up to prepare your body for intense
+                            training.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/exercises.jpeg" alt="Compound Exercises">
+                        <h4>Compound Exercises</h4>
+                        <p>Focus on compound movements like squats, deadlifts, and bench presses to build overall
+                            strength and size.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/protien.webp" alt="Protein Intake">
+                        <h4>Optimal Protein Intake</h4>
+                        <p>Ensure adequate protein consumption to support muscle repair and growth after workouts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/overload.jpeg" alt="Progressive Overload">
+                        <h4>Progressive Overload</h4>
+                        <p>Gradually increase weight or intensity in your workouts to continuously challenge your
+                            muscles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/recovery.jpeg" alt="Rest Days">
+                        <h4>Rest and Recovery</h4>
+                        <p>Incorporate rest days to allow your muscles to recover and grow effectively.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/cconsistent.jpeg" alt="Consistency">
+                        <h4>Stay Consistent</h4>
+                        <p>Consistency in training and nutrition is key to achieving significant muscle-building
+                            results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2025
+                        - Designed & Developed by <a href="https://teamtechpro.netlify.app/" class="tm-text-link"
+                            target="_blank" rel="noopener">Team TechPro </a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer End ***** -->
+</body>
+
+</html>
