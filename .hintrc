@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/structure": "off",
+    "compat-api/css": "off",
+    "no-inline-styles": "off",
+    "button-type": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not firefox <= 133",
+    "not safari <= 18.1"
+  ]
+}
