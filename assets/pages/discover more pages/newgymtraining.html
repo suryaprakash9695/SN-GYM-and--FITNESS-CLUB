@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Training - SN GYM & FITNESS CLUB</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            padding: 30px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .section-heading em {
+            color: #e74c3c;
+        }
+
+        .section-heading img {
+            margin: 20px auto;
+            display: block;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .bg-light {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0px;
+        }
+
+        footer p {
+            color: #232d39;
+            font-size: 16px;
+        }
+
+        footer p a {
+            cursor: pointer;
+            color: #ed563b;
+        }
+
+        footer p a:hover {
+            color: #ed563b;
+        }
+
+        .back-button {
+            display: block;
+            width: 180px;
+            margin: 20px auto;
+            padding: 12px;
+            text-align: center;
+            background: linear-gradient(45deg, #ff5733, #c70039);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(255, 87, 34, 0.5);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back(); // Goes back if there is a history
+            } else {
+                window.open('', '_self').close(); // Tries to close the tab
+                window.location.href = "/index.html"; // Redirects if close fails
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <button class="back-button" onclick="goBack()">&#8592; Go Back</button>
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h2>Welcome to <em>SN GYM & FITNESS CLUB</em></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="gym-training">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Gym Training Programs</h2>
+                        <img src="/assets/images/line-dec.png" alt="waves">
+                        <p>Explore our structured training programs designed to help you achieve your fitness goals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/weightlifting.jpeg" alt="Weightlifting">
+                        <h4>Weight Training</h4>
+                        <p>Build muscle strength and endurance with our guided weight training sessions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/cardio.webp" alt="Cardio Workouts">
+                        <h4>Cardio Workouts</h4>
+                        <p>Improve your heart health and burn calories with high-intensity cardio exercises.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/crossfit.webp" alt="CrossFit Training">
+                        <h4>CrossFit Training</h4>
+                        <p>Challenge yourself with dynamic full-body workouts and strength conditioning.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/bodybuilding.webp" alt="Bodybuilding">
+                        <h4>Bodybuilding</h4>
+                        <p>Follow a structured program to gain muscle mass and sculpt your physique.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/yoga.jpeg" alt="Yoga & Flexibility">
+                        <h4>Yoga & Flexibility</h4>
+                        <p>Enhance your flexibility and recovery with yoga and mobility exercises.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/personal training.jpeg" alt="Personal Training">
+                        <h4>Personal Training</h4>
+                        <p>Get one-on-one training with expert guidance tailored to your fitness goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2025
+                        - Designed & Developed by <a href="https://teamtechpro.netlify.app/" class="tm-text-link"
+                            target="_blank" rel="noopener">Team TechPro </a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer End ***** -->
+</body>
+
+</html>
