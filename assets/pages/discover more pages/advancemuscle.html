@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Muscle Training - SN GYM & FITNESS CLUB</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            padding: 30px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .section-heading em {
+            color: #e74c3c;
+        }
+
+        .section-heading img {
+            margin: 20px auto;
+            display: block;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .bg-light {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0px;
+        }
+
+        footer p {
+            color: #232d39;
+            font-size: 16px;
+        }
+
+        footer p a {
+            cursor: pointer;
+            color: #ed563b;
+        }
+
+        footer p a:hover {
+            color: #ed563b;
+        }
+
+        .back-button {
+            display: block;
+            width: 180px;
+            margin: 20px auto;
+            padding: 12px;
+            text-align: center;
+            background: linear-gradient(45deg, #ff5733, #c70039);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(255, 87, 34, 0.5);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back(); // Goes back if there is a history
+            } else {
+                window.open('', '_self').close(); // Tries to close the tab
+                window.location.href = "/index.html"; // Redirects if close fails
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <button class="back-button" onclick="goBack()">&#8592; Go Back</button>
+
+    <section class="section" id="advanced-training">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h2>Advanced <em>Muscle Training</em></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="training-techniques">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Advanced Training Techniques</h2>
+                        <img src="/assets/images/line-dec.png" alt="waves">
+                        <p>Enhance your muscle-building journey with expert strategies and techniques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/strength.jpg" alt="Strength Training">
+                        <h4>Progressive Overload</h4>
+                        <p>Gradually increase weight and intensity to stimulate continuous muscle growth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/cl.jpg" alt="Compound Lifts">
+                        <h4>Compound Movements</h4>
+                        <p>Focus on exercises like deadlifts, squats, and bench press for full-body development.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/time.jpg" alt="Time Under Tension">
+                        <h4>Time Under Tension</h4>
+                        <p>Slow down your reps to maximize muscle activation and endurance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/recovery.jpeg" alt="Recovery">
+                        <h4>Optimized Recovery</h4>
+                        <p>Utilize proper rest, nutrition, and sleep to support muscle repair and growth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/mmcon.jpg" alt="Mind-Muscle Connection">
+                        <h4>Mind-Muscle Connection</h4>
+                        <p>Enhance focus and contraction in every rep to target muscles effectively.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <img src="/assets/images/nutrition1.jpeg" alt="Advanced Nutrition">
+                        <h4>Advanced Nutrition</h4>
+                        <p>Follow a precise macronutrient plan to fuel muscle growth and performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2025
+                        - Designed & Developed by <a href="https://teamtechpro.netlify.app/" class="tm-text-link"
+                            target="_blank" rel="noopener">Team TechPro </a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer End ***** -->
+</body>
+
+</html>
